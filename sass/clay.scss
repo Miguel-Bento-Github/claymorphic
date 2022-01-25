@@ -1,0 +1,34 @@
+@use "./shadow.scss" as *;
+
+.clay {
+  height: 15vh;
+  width: 15vh;
+  border-radius: 5rem;
+  transition: all 0.15s ease-in-out;
+  animation: morphing ease-in-out 12s infinite alternate;
+
+  &:first-child {
+    background: #f4f4f4;
+    @include shadow(rgba(#5acee9, 0.5), #999);
+    animation-direction: alternate-reverse;
+    animation-fill-mode: backwards;
+    animation-delay: 1s;
+  }
+
+  &:last-child {
+    background: #222;
+    @include shadow();
+  }
+}
+
+@keyframes morphing {
+  43% {
+    border-radius: 81% 19% 29% 71% / 90% 30% 70% 10%;
+  }
+  28% {
+    border-radius: 89% 40% 67% 33% / 89% 30% 40% 40%;
+  }
+  83% {
+    border-radius: 30% 70% 67% 33% / 30% 30% 70% 70%;
+  }
+}

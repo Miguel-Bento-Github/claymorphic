@@ -1,0 +1,41 @@
+@use "./background.scss" as *;
+
+.controller {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+
+  button {
+    width: 100%;
+    font-size: 1rem;
+    font-family: Avenir;
+    letter-spacing: 5px;
+    border: 0;
+    cursor: pointer;
+    transition: filter 0.15s ease-in-out;
+
+    @media screen and (min-width: 800px) {
+      font-size: 3rem;
+    }
+
+    &:hover {
+      filter: invert(100%);
+      transition: filter 0.25s ease-in-out;
+    }
+
+    &:first-child {
+      @include dark;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    &:last-child {
+      @include light;
+      font-weight: 600;
+      mix-blend-mode: difference;
+    }
+  }
+}

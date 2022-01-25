@@ -1,0 +1,45 @@
+@use "./background.scss" as *;
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+}
+
+.view {
+  height: 100vh;
+  display: grid;
+
+  @media screen and (min-width: 800px) {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+.container {
+  padding: 16px;
+  gap: 16px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  &:last-child {
+    padding-bottom: 80px;
+  }
+
+  @media screen and (min-width: 800px) {
+    padding: 32px;
+  }
+
+  &.light {
+    @include light;
+  }
+
+  &.dark {
+    @include dark;
+  }
+
+  & > * {
+    transition: all 0.15s ease-in-out;
+  }
+}

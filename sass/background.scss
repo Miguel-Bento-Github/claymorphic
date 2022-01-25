@@ -1,0 +1,27 @@
+@mixin light {
+  background: conic-gradient(
+    from 120deg at 50% 100%,
+    #265c22,
+    #298740,
+    #2bb679,
+    #38dbc6,
+    #5acee9,
+    #81baf4,
+    #abbafc,
+    #ded9ff
+  );
+}
+
+@mixin dark {
+  background: conic-gradient(
+    from 240deg at 50% 100%,
+    #19004a,
+    #33034e,
+    #4e0751,
+    #530c40,
+    #55112e,
+    #56171e,
+    #57291d,
+    #573e24
+  );
+}

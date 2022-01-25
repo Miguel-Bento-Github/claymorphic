@@ -4,17 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.scss" />
+    <link rel="stylesheet" href="boot.scss" />
+    <script type="module" src="./index.ts"></script>
     <title>Claymorphism</title>
   </head>
   <body>
-    <div class="container light">
-      <div class="clay clay-light"></div>
-      <div class="clay clay-dark"></div>
+    <div class="view">
+      <div class="container light">
+        <div class="clay"></div>
+        <div class="clay"></div>
+      </div>
+      <div class="container dark">
+        <div class="clay"></div>
+        <div class="clay"></div>
+      </div>
     </div>
-    <div class="container dark">
-      <div class="clay clay-light"></div>
-      <div class="clay clay-dark"></div>
+
+    <div class="controller">
+      <button type="button" class="button">Previous</button>
+      <button type="button" class="button">Next</button>
     </div>
   </body>
 </html>
